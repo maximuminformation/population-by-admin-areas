@@ -1,2 +1,8 @@
+__pycache__
 *.gpkg
 *.tif
+*.shp
+*.cpg
+*.dbf
+*.prj
+*.shx
