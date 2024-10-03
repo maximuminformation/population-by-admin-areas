@@ -18,14 +18,14 @@ This Python attributes gridded population data to polygon amministrative areas.
       Using the data to create maps for publishing of academic research articles is allowed. Thus you can use the maps you made with GADM data for figures in articles published by PLoS, Springer Nature, Elsevier, MDPI, etc. You are allowed (but not required) to publish these articles (and the maps they contain) under an open license such as CC-BY as is the case with PLoS journals and may be the case with other open access articles. Data for the following countries is covered by a a different license Austria: Creative Commons Attribution-ShareAlike 2.0 (source: Government of Ausria) 
 
 
-## What src\pop_by_admin_area.py code do?
+## What ```src\pop_by_admin_area.py``` code do?
 The code accepts two inputs, the file paths of a single band tif file containing the population values at 1Km resolution and a geopackage file containing the administrative areas for every county in the World.
 
 The ```.gpkg``` contains 6 layers for 6 different administrative levels, however the code will only process ```ADM_1``` and ```ADM_2``` levels.
 
 The code will iterate through each polygon for each amministrative area in each layer and calculate the total population falling within the ```.tif``` file and save the results in a new geopackage and shape files.
 
-## What src\pop_by_admin_area_raster.py code do?
+## What ```src\pop_by_admin_area_raster.py``` code do?
 The code accepts a geopackage file containing the administrative subdivisions and a .tif file containing the population data.
 
 The code will rasterize the polygons in the geopackage and process the raster data in 100x100 chunks to avoid memory problems.
